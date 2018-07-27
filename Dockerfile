@@ -4,8 +4,6 @@ MAINTAINER Ferdie Culibao
 
 VOLUME ["/var/www"]
 
-
-
 RUN apt-get update && \
     apt-get install -y \
       locales \
@@ -19,15 +17,7 @@ RUN apt-get update && \
       php5-mysql \
       php5-pgsql
 
-#COPY site_default /etc/apache2/sites-available/000-default.conf
-
-#COPY run /usr/local/bin/run
-
-#RUN chmod +x /usr/local/bin/run
-
 RUN a2enmod rewrite
-
-
 
 EXPOSE 80
 
